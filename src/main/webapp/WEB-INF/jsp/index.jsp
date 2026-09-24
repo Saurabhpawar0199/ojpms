@@ -1,5 +1,6 @@
+<!DOCTYPE html>
 <html>
 <body>
-<src="home.jsp">click here</>
+    <a href="home.jsp">Click here</a>
 </body>
 </html>
