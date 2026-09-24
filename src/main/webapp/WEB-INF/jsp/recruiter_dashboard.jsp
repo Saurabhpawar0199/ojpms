@@ -1,0 +1,178 @@
+<%@ page language="java"
+    contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
+
+<%@ page isELIgnored="false"%>
+
+<!DOCTYPE html>
+
+<html>
+
+<head>
+
+<meta charset="UTF-8">
+
+<title>OJPMS - Recruiter Dashboard</title>
+
+<link rel="stylesheet"
+      href="${pageContext.request.contextPath}/assets/base.css">
+
+<link rel="stylesheet"
+      href="${pageContext.request.contextPath}/assets/recruiter_dashboard.css">
+
+</head>
+
+<body>
+
+<jsp:include page="navbar.jsp"/>
+
+<div class="dashboard">
+
+    <!-- Welcome Section -->
+
+    <div class="welcome-section">
+
+        <h1>Recruiter Dashboard</h1>
+
+        <h2>Welcome Back, ${sessionScope.user.name}</h2>
+
+        <p>
+            Manage jobs, review applications,
+            and hire talented candidates.
+        </p>
+
+    </div>
+
+    <!-- Statistics -->
+
+    <div class="stats-section">
+
+        <div class="card">
+
+            <h2>${jobCount}</h2>
+
+            <p>Total Jobs Posted</p>
+
+        </div>
+
+        <div class="card">
+
+            <h2>12</h2>
+
+            <p>Active Jobs</p>
+
+        </div>
+
+        <div class="card">
+
+            <h2>${applicationCount}</h2>
+
+            <p>Applications Received</p>
+
+        </div>
+
+        <div class="card">
+
+            <h2>89%</h2>
+
+            <p>Hiring Success Rate</p>
+
+        </div>
+
+    </div>
+
+    <!-- Quick Actions -->
+
+    <div class="quick-actions">
+
+        <h2>Quick Actions</h2>
+
+        <div class="quick-actions-links">
+
+            <a href="${pageContext.request.contextPath}/postjob">
+                📋 Post Job
+            </a>
+
+            <a href="${pageContext.request.contextPath}/managejobs">
+                📂 Manage Jobs
+            </a>
+
+            <a href="${pageContext.request.contextPath}/viewapplicants">
+                👥 View Applicants
+            </a>
+
+            <a href="${pageContext.request.contextPath}/profile?id=${sessionScope.user.id}">
+                👤 Update Profile
+            </a>
+
+        </div>
+
+    </div>
+
+    <!-- Recent Jobs -->
+
+    <div class="recent-jobs">
+
+        <h2>Recently Posted Jobs</h2>
+
+        <ul>
+
+            <li>No jobs posted yet.</li>
+
+        </ul>
+
+    </div>
+
+    <!-- Latest Applications -->
+
+    <div class="applications">
+
+        <h2>Latest Applications</h2>
+
+        <ul>
+
+            <li>No applications received.</li>
+
+        </ul>
+
+    </div>
+
+    <!-- Notifications -->
+
+    <div class="notifications">
+
+        <h2>Notifications</h2>
+
+        <ul>
+
+            <li>No new notifications.</li>
+
+        </ul>
+
+    </div>
+
+    <!-- Hiring Tips -->
+
+    <div class="tips">
+
+        <h2>Recruiter Tips</h2>
+
+        <ul>
+
+            <li>Complete your company profile.</li>
+
+            <li>Write detailed job descriptions.</li>
+
+            <li>Respond to applicants promptly.</li>
+
+            <li>Keep job postings updated.</li>
+
+        </ul>
+
+    </div>
+
+</div>
+
+</body>
+
+</html>

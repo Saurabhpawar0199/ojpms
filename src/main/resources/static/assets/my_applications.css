@@ -1,0 +1,269 @@
+/* ======================================
+   MY APPLICATIONS PAGE
+====================================== */
+
+.applications-page{
+
+    max-width:1400px;
+
+    margin:40px auto;
+
+    padding:0 20px;
+}
+
+/* ======================================
+   PAGE HEADER
+====================================== */
+
+.applications-page h1{
+
+    font-size:40px;
+
+    color:#111827;
+
+    margin-bottom:10px;
+}
+
+.applications-page > p{
+
+    color:#6b7280;
+
+    margin-bottom:35px;
+
+    font-size:16px;
+}
+
+/* ======================================
+   EMPTY STATE
+====================================== */
+
+.applications-page h3{
+
+    text-align:center;
+
+    background:white;
+
+    padding:30px;
+
+    border-radius:20px;
+
+    border:1px solid #e5e7eb;
+
+    color:#ef4444;
+}
+
+/* ======================================
+   APPLICATION GRID
+====================================== */
+
+.applications-grid{
+
+    display:grid;
+
+    grid-template-columns:
+    repeat(3,1fr);
+
+    gap:25px;
+
+    align-items:stretch;
+}
+
+/* ======================================
+   APPLICATION CARD
+====================================== */
+
+.application-card{
+
+    background:white;
+
+    border-radius:24px;
+
+    border:1px solid #e5e7eb;
+
+    padding:24px;
+
+    position:relative;
+
+    overflow:hidden;
+
+    display:flex;
+
+    flex-direction:column;
+
+    min-height:320px;
+
+    transition:.35s ease;
+}
+
+/* Shine Effect */
+
+.application-card::before{
+
+    content:"";
+
+    position:absolute;
+
+    top:0;
+    left:-100%;
+
+    width:100%;
+    height:100%;
+
+    background:
+    linear-gradient(
+    90deg,
+    transparent,
+    rgba(99,102,241,.06),
+    transparent);
+
+    transition:.8s;
+}
+
+.application-card:hover::before{
+
+    left:100%;
+}
+
+.application-card:hover{
+
+    transform:translateY(-8px);
+
+    box-shadow:
+    0 20px 40px rgba(79,70,229,.12);
+}
+
+/* ======================================
+   JOB TITLE
+====================================== */
+
+.application-card h2{
+
+    color:#111827;
+
+    font-size:22px;
+
+    margin-bottom:15px;
+
+    min-height:60px;
+}
+
+/* ======================================
+   TEXT
+====================================== */
+
+.application-card p{
+
+    color:#6b7280;
+
+    font-size:14px;
+
+    line-height:1.6;
+
+    margin-bottom:10px;
+}
+
+.application-card b{
+
+    color:#374151;
+}
+
+/* ======================================
+   DESCRIPTION
+====================================== */
+
+.description{
+
+    flex-grow:1;
+}
+
+/* ======================================
+   STATUS BADGES
+====================================== */
+
+.status{
+
+    display:inline-flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    width:max-content;
+
+    margin-top:auto;
+
+    padding:8px 16px;
+
+    border-radius:30px;
+
+    font-size:13px;
+
+    font-weight:600;
+}
+
+/* Applied */
+
+.status-applied{
+
+    background:#dbeafe;
+
+    color:#2563eb;
+}
+
+/* Under Review */
+
+.status-review{
+
+    background:#fef3c7;
+
+    color:#d97706;
+}
+
+/* Selected */
+
+.status-selected{
+
+    background:#dcfce7;
+
+    color:#16a34a;
+}
+
+/* Rejected */
+
+.status-rejected{
+
+    background:#fee2e2;
+
+    color:#dc2626;
+}
+
+/* ======================================
+   RESPONSIVE
+====================================== */
+
+@media(max-width:1100px){
+
+    .applications-grid{
+
+        grid-template-columns:
+        repeat(2,1fr);
+    }
+}
+
+@media(max-width:768px){
+
+    .applications-grid{
+
+        grid-template-columns:1fr;
+    }
+
+    .applications-page h1{
+
+        font-size:30px;
+    }
+
+    .application-card{
+
+        min-height:auto;
+    }
+}
